@@ -8,7 +8,6 @@
 ###################################################################################################################################################################
 
 import xmlrpc.client
-import sys
 
 ## microservice 1 (functions print all, print topic, add topic)
 def microservice_notes():
