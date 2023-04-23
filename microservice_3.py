@@ -14,7 +14,7 @@ from xmlrpc.server import SimpleXMLRPCRequestHandler
 import requests
 
 ## API key from OpenWeatherMap free tier
-api_key = 'see moodle comment'
+api_key = '1ac91e80730e644142ba58835e100c52'
 
 ## Restrict to a particular path.
 class RequestHandler(SimpleXMLRPCRequestHandler):

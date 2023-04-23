@@ -36,7 +36,7 @@ with SimpleXMLRPCServer(('localhost', 8001),
 
     ## Divide user inputs and return them
     def divider_function(x, y):
-        return x / y
+        return float(x) / float(y)
     server.register_function(divider_function, 'divide')
 
     ## Power to the user inputs and return them

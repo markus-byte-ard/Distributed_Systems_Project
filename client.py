@@ -134,7 +134,7 @@ def microservice_calculator():
             ## Calls the add function from microservice 2
             if (selectInput == '1'):
                 try:
-                    print("Result: %f \n" % s.add(num1, num2))
+                    print(f"Result: {s.add(num1, num2)}\n")
 
                 ## No connection for example not running server
                 except ConnectionRefusedError as err1:
@@ -148,7 +148,7 @@ def microservice_calculator():
             ## Calls the subtract function from microservice 2
             elif (selectInput == '2'):
                 try:
-                    print("Result: %f \n" % s.divide(num1, num2))
+                    print(f"Result: {s.subtract(num1, num2)}\n")
 
                 ## No connection for example not running server
                 except ConnectionRefusedError as err1:
@@ -162,7 +162,7 @@ def microservice_calculator():
             ## Calls the multiply function from microservice 2
             elif (selectInput == '3'):
                 try:
-                    print("Result: %f \n" % s.multiply(num1, num2))
+                    print(f"Result: {s.multiply(num1, num2)}\n")
 
                 ## No connection for example not running server
                 except ConnectionRefusedError as err1:
@@ -176,7 +176,7 @@ def microservice_calculator():
             ## Calls the divide function from microservice 2
             elif (selectInput == '4'):
                 try:
-                    print("Result: %f \n" % s.divide(num1, num2))
+                    print(f"Result: {s.divide(num1, num2)}\n")
 
                 ## No connection for example not running server
                 except ConnectionRefusedError as err1:
@@ -190,7 +190,7 @@ def microservice_calculator():
             ## Calls the power to function from microservice 2
             elif (selectInput == '5'):
                 try:
-                    print("Result: %f \n" % s.power(num1, num2))
+                    print(f"Result: {s.power(num1, num2)}\n")
 
                 ## No connection for example not running server
                 except ConnectionRefusedError as err1:
