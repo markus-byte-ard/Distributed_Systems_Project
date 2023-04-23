@@ -37,9 +37,9 @@ def microservice_notes():
                 else:
                     print(result)
 
-            ## No connection for example not running server.py
+            ## No connection for example not running server
             except ConnectionRefusedError as err1:
-                sys.exit("Connection error")
+                print(f"Connection error: {err1}\n")
             
             ## Built in xmlrpc fault errors
             except xmlrpc.client.Fault as err2:
@@ -60,9 +60,9 @@ def microservice_notes():
                 else:
                     print(result)
 
-            ## No connection for example not running server.py
+            ## No connection for example not running server
             except ConnectionRefusedError as err1:
-                sys.exit("Connection error")
+                print(f"Connection error: {err1}\n")
             
             ## Built in xmlrpc fault errors
             except xmlrpc.client.Fault as err2:
@@ -86,9 +86,9 @@ def microservice_notes():
                 else:
                     print("Topic was added succesfully!\n")
             
-            ## No connection for example not running server.py
+            ## No connection for example not running server
             except ConnectionRefusedError as err1:
-                sys.exit("Connection error")
+                print(f"Connection error: {err1}\n")
             
             ## Built in xmlrpc fault errors
             except xmlrpc.client.Fault as err2:
@@ -136,6 +136,11 @@ def microservice_calculator():
             if (selectInput == '1'):
                 try:
                     print("Result: %f \n" % s.add(num1, num2))
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -145,6 +150,11 @@ def microservice_calculator():
             elif (selectInput == '2'):
                 try:
                     print("Result: %f \n" % s.divide(num1, num2))
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -154,6 +164,11 @@ def microservice_calculator():
             elif (selectInput == '3'):
                 try:
                     print("Result: %f \n" % s.multiply(num1, num2))
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+                
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -163,6 +178,11 @@ def microservice_calculator():
             elif (selectInput == '4'):
                 try:
                     print("Result: %f \n" % s.divide(num1, num2))
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+                
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -172,6 +192,11 @@ def microservice_calculator():
             elif (selectInput == '5'):
                 try:
                     print("Result: %f \n" % s.power(num1, num2))
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+                
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -207,6 +232,11 @@ def microservice_weather():
             if (selectInput == '1'):
                 try:
                     print(f"\n{s.weather(location)}\n")
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+                
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
@@ -216,6 +246,11 @@ def microservice_weather():
             elif (selectInput == '2'):
                 try:
                     print(f"\n{s.pollution(location)}\n")
+
+                ## No connection for example not running server
+                except ConnectionRefusedError as err1:
+                    print(f"Connection error: {err1}\n")
+                
                 except xmlrpc.client.Fault as err:
                     print("A fault occurred")
                     print("Fault code: %d" % err.faultCode)
